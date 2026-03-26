@@ -1,0 +1,111 @@
+:root {
+  /* Couleurs principales */
+  --color-primary: #F7F5F0;
+  --color-secondary: #735240;
+  /* --third-color: #57372B; */
+
+  /* Couleurs de priorité */
+  --priority-green: #2ECC40;
+  --priority-yellow: #FFEA00;
+  --priority-red: #FF1744;
+
+  /* Couleur des bordures */
+  --border:1px solid #D6CFC6;
+}
+
+main{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --------------- partie du haut ---------------*/
+
+.partie-haut{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partie-haut h1{
+    font-size: 5rem;
+}
+
+#sous-titre{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+#timer{
+    margin: 3.5rem;
+    background-color: var(--color-primary);
+    color: black;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    padding: 2.2rem 4rem;
+    border-radius: 25px;
+    font-family: "Digital", monospace;
+}
+
+#before{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+#before i{
+    margin-left: 0.4rem;
+    color: black;
+}
+
+/* --------------- partie du bas ---------------*/
+.partie-bas{
+    background-color: var(--color-primary);
+    padding-top: 2.8em;
+}
+
+.task{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+input, select, #btn-add{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input, select{
+    border: var(--border);
+    padding: 0.6rem;
+}
+
+input:focus{
+    background-color: rgb(240, 240, 240);
+}
+
+#btn-add{
+    color: white;
+    font-size: 1.1rem;
+    background-color: var(--color-secondary);
+    width: 3.3rem;
+    font-weight: bold;
+}
+
+#btn-add:hover{
+    background-color: #4e382c;
+    cursor: pointer;
+}
+
+/* ----- to do ---- */
+
+#title-to-do{
+    font-size: 2.1rem;
+    margin-top: 2.8rem;
+}
+
+#title-to-do i{
+    margin-left: 0.4rem;
+    color: var(--priority-green);
+}

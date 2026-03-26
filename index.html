@@ -6,38 +6,38 @@
     <title>to-do list</title>
     <link rel="stylesheet" href="asserts/js/css/loader.css">
     <link rel="stylesheet" href="asserts/js/css/reset.css">
-    <link rel="stylesheet" href="asserts/js/css/style.css">*
+    <link rel="stylesheet" href="asserts/js/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <main>
-        <section class="partie-ahut">
-            <h1>To do list</h1>
-            <p>Organize your work day better !</p>
-            <time datetime=""></time>
-            <p>Before the end of the day 
+        <section class="partie-haut">
+            <h1>ToDo List</h1>
+            <p id="sous-titre">Organize your work day better !</p>
+            <time id="timer" datetime=""></time>
+            <p id="before">Before the end of the day 
                 <i class="fa-solid fa-hourglass"></i>
             </p>
         </section>
 
         <section class="partie-bas">
             <div class="task">
-                <div class="priority-btn-add">
+                <input type="text" name="add-task" id="add-task" placeholder="add a task">
+
                     <select name="priority" id="priority_select">
                         <option value="not-urgent">not-urgent</option>
                         <option value="semi-urgent">semi-urgent</option>
                         <option value="urgent">urgent</option>
                     </select>
 
-                    <button>+</button>
-                </div>
+                    <button id="btn-add">+</button>
             </div>
 
-            <h2>To do 
+            <h2 id="title-to-do">ToDo 
                 <i class="fa-solid fa-square-check"></i>
             </h2>
 
-            <ul>
+            <ul class="list-tasks">
                 <li></li>
             </ul>
         </section>

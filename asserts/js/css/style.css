@@ -60,15 +60,18 @@ main{
 }
 
 /* --------------- partie du bas ---------------*/
+
 .partie-bas{
     background-color: var(--color-primary);
     padding-top: 2.8em;
+    height: 100vh;
 }
+
 
 .task{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 input, select, #btn-add{
@@ -83,6 +86,16 @@ input, select{
 
 input:focus{
     background-color: rgb(240, 240, 240);
+    border: 1px solid var(--color-secondary);
+}
+
+#priority-select{
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%233B2416' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
 }
 
 #btn-add{
@@ -102,10 +115,90 @@ input:focus{
 
 #title-to-do{
     font-size: 2.1rem;
-    margin-top: 2.8rem;
+    margin: 2.8rem 0 0 0.5rem;
 }
 
 #title-to-do i{
-    margin-left: 0.4rem;
+    margin: 1rem;
     color: var(--priority-green);
+}
+
+
+/* --------- list of tasks -------- */
+
+
+/* ----- color des tasks ---- */
+.urgent{
+    background: var(--priority-red);
+}
+
+.semi-urgent{
+    background: var(--priority-yellow);
+}
+
+.not-urgent{
+    background: var(--priority-green);
+}
+
+/* ------------------------------ */
+.list-tasks li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border: var(--border);
+    border-radius: 20px;
+    padding: 12px 14px;
+    margin: 0.8rem 2.5rem;
+}
+
+.fa-solid{
+    cursor: pointer;
+}
+
+.list-tasks p{
+    flex: 1;
+}
+
+.colorTask{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+}
+
+.validationTask {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid #D6CFC6;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.validationTask:checked {
+    background: #3B2416;
+    border-color: #3B2416;
+}
+
+.bin:hover{
+    cursor: pointer;
+}
+
+/* ---------- suppression task --------- */
+.removeTask{
+    opacity: 0.5;
+}
+
+.removeTask p{
+    text-decoration: line-through;
+}
+
+
+
+@media (min-width: 768px) {
+    .list-tasks li{
+        margin: 0.8rem 15rem;
+    }
 }
